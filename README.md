@@ -1,6 +1,6 @@
 # Chroma LoRA Training
 
-This project provides a complete pipeline for training LoRA (Low-Rank Adaptation) weights on the Chroma diffusion model. The workflow includes dataset preparation, embedding caching, LoRA training, and image generation.
+This project provides a simple pipeline for training LoRA weights on the Chroma diffusion model. The workflow includes embedding caching, LoRA training, and image generation. The aim is to minimize the number of options and config files. If you have a <24GB GPU or complex requirements, try https://github.com/ostris/ai-toolkit instead.
 
 ## Installation
 
