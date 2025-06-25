@@ -29,8 +29,7 @@ The complete training pipeline consists of 4 main steps:
 1. **Dataset Preparation** - Organize images and captions
 2. **Embedding Caching** - Process and cache embeddings for efficient training
 3. **LoRA Training** - Train LoRA weights on the cached data
-4. **Image Generation** - Sample images using the trained LoRA
-5. **ComfyUI Use** - Copy the Lora to the ComfyUI/models/lora folder for use with Chroma in ComfyUI
+4. **ComfyUI Use** - Copy the Lora to the ComfyUI/models/lora folder for use with Chroma in ComfyUI
 
 ## Step 1: Dataset Preparation
 
@@ -107,30 +106,4 @@ uv run train.py \
 
 ## Step 4: Image Generation
 
-Generate images using your trained LoRA:
-
-```bash
-
-uv run cache.py --prompt "your sample prompt for testing" --output my_sample_prompt.pkl
-
-uv run sample.py \
-    --model_path chroma-unlocked-v39.safetensors \
-    --lora_path lora/name/lora_name_step_1000.safetensors \
-    --prompt my_sample_prompt.pkl \
-    --output generated_image.png \
-    --width 512 \
-    --height 512 \
-    --steps 25 \
-    --guidance_scale 4.0 \
-    --seed 42
-```
-
-### Parameters
-- `--model_path`: Path to base Chroma model
-- `--lora_path`: Path to trained LoRA weights (optional)
-- `--prompt`: Path to cached prompt embeddings
-- `--output`: Output image filename
-- `--width/height`: Generated image dimensions
-- `--steps`: Number of diffusion steps
-- `--guidance_scale`: CFG strength
-- `--seed`: Random seed for reproducible results
+Copy the Lora file with the best sample output to ComfyUI/models/loras and use the default Chroma workflow
