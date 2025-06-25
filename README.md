@@ -1,6 +1,8 @@
 # Chroma LoRA Training
 
-This project provides a simple pipeline for training LoRA weights on the Chroma diffusion model. The workflow includes embedding caching, LoRA training, and image generation. The aim is to minimize the number of options and config files. If you have a <24GB GPU or complex requirements, try https://github.com/ostris/ai-toolkit instead.
+This project provides a simple pipeline for training LoRA weights on the Chroma diffusion model. The workflow includes embedding caching, LoRA training, and image generation. The aim is to minimize the number of options and config files. 
+
+If you have a <24GB GPU or complex requirements, try https://github.com/ostris/ai-toolkit instead. Model code is from https://github.com/lodestone-rock/flow
 
 ## Installation
 
